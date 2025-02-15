@@ -14,5 +14,8 @@ const magazineSchema = new mongoose.Schema({
   publisher: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
+    ref: "Publisher",
   },
 });
+
+export const Magazine = mongoose.model("Magazine", magazineSchema);
